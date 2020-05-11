@@ -4,9 +4,13 @@ const routes: IBestAFSRoute[] = [
   {
     path: '/',
     component: '@/pages/index',
-    icon: 'smile',
+  },
+  {
+    path: '/mini',
+    // component: '@/pages/ListTableList',
+    icon: 'barcode',
     menu: {
-      name: 'hello',
+      name: 'miniprogram',
     },
   },
   {
@@ -14,7 +18,7 @@ const routes: IBestAFSRoute[] = [
     component: '@/pages/user/login',
   },
   {
-    path: '/welcome',
+    path: '/Dashboard',
     component: '@/pages/welcome',
     icon: 'smile',
     menu: {

@@ -1,7 +1,4 @@
 export default {
-  'menu.hello': '你好',
-  'menu.welcome': '欢迎',
-  'menu.slave': '微前端：子应用',
-  'menu.dva': 'dva',
-  WELCOME_TO_UMI_WORLD: '{name}，欢迎光临umi的世界',
+  'menu.home': '首页',
+  'menu.miniprogram': '小程序运维平台',
 };

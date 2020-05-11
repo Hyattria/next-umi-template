@@ -8,11 +8,10 @@ interface PageProps {
 
 const IndexPage: ConnectRC<PageProps> = ({ global }) => {
   const { name } = global;
-  // const { initialState } = useModel('@@initialState');
-
+  const { initialState } = useModel('@@initialState');
   return (
     <React.Fragment>
-      {/* <div>InitState,Data {JSON.stringify(initialState)}</div> */}
+      <div>InitState,Data {JSON.stringify(initialState)}</div>
       Hello {name}
     </React.Fragment>
   );

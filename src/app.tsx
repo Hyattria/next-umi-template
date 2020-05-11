@@ -1,11 +1,20 @@
 import React from 'react';
+import { history, useIntl } from 'umi';
 import { ResponseError, Context } from 'umi-request';
 import { DefaultFooter } from '@ant-design/pro-layout';
 
 // @umijs/plugin-layout 配置
 export const layout = {
-  logout: () => {}, // do something
-  breadcrumbRender: (routers = []) => [...routers],
+  logout: () => {
+    history.replace('/login');
+  }, // do something when you logout
+  breadcrumbRender: (routers = []) => [
+    {
+      path: '/',
+      breadcrumbName: useIntl().formatMessage({ id: 'menu.home' }),
+    },
+    ...routers,
+  ],
   footerRender: () => <DefaultFooter copyright="umijs" />, // return string || ReactNode;
 };
 
@@ -36,3 +45,7 @@ export async function getInitialState() {
     isLogin: false,
   };
 }
+
+// export function onRouteChange({ location, routes, action }) {
+//   history.replace('/login');
+// }

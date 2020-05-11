@@ -8,12 +8,12 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  // dva: {
-  //   immer: true,
-  //   hmr: false,
-  // },
-  // locale: {
-  //   antd: true,
-  // },
+  dva: {
+    immer: true,
+    hmr: true,
+  },
+  locale: {
+    antd: true,
+  },
   routes,
 });
